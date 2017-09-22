@@ -1,0 +1,6 @@
+#!/bin/sh
+printf '    *****MAKE ************************\n'
+make sample  && chmod +x sample && 
+printf '    *****RUN  ************************\n'&&
+./sample
+printf '*********DONE ************************\n'
