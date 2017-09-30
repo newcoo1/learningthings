@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 #define clears printf("\033[2J\033[1;1H")
-#define TH 12 
+#define TH 10 
 
 typedef struct Tower{
     int disks[TH+1];
@@ -49,7 +49,7 @@ int main(){
 	mv(towers[ins0],towers[ins1]);
 	printf("top : %d %d %d\n",t0.top,t1.top,t2.top);
 	draw(&t0,&t1,&t2);
-//	usleep(100000);
+	usleep(100000);
     }
     printf("%d loops!!!!\n",count);
     return 0;
