@@ -4,3 +4,5 @@ make exef  && chmod +x exef &&
 printf '    *****RUN  ************************\n'&&
 ./exef
 printf '*********DONE ************************\n'
+
+rm exef
