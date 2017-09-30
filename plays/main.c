@@ -48,7 +48,7 @@ int main(){
 	mv(towers[ins0],towers[ins1]);
 	printf("top : %d %d %d\n",t0.top,t1.top,t2.top);
 	draw(&t0,&t1,&t2);
-	//usleep(1000);
+	usleep(100000);
     }
     printf("%d loops!!!!\n",count);
     return 0;
