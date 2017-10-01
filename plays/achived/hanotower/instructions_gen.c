@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#define S 15
-int main(){
+int main(int arg,char * args[]){
+    int S=atoi(args[1]);
     mvdisk(0,2,1,S);
     return 0;
 }
