@@ -9,7 +9,8 @@
 /* The keyboard function should be clear about the keystrokes               */
 /* The mouse can be used to zoom into and out of the scene                  */
 /****************************************************************************/
-
+#include <GL/glew.h>
+#include <GL/freeglut.h>
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -466,6 +467,7 @@ int main(int argc, char** argv)
 #ifdef __APPLE__
 	glutInitDisplayMode (GLUT_3_2_CORE_PROFILE | GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 #else
+	glutInitContextVersion(3,1); 
 	glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 #endif
 
@@ -473,6 +475,7 @@ int main(int argc, char** argv)
 	glutCreateWindow ("Simple Demo with Shaders");
 
 #ifndef __APPLE__ // Do not use GLew on OSX systems!
+	glewExperimental = GL_TRUE;
 	GLenum err = glewInit() ; 
 	if (GLEW_OK != err) { 
 		std::cerr << "Error: " << glewGetString(err) << std::endl; 
