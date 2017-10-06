@@ -84,3 +84,15 @@ int lower(char uc){
     uc=( (uc>='A') &&(uc<='Z') ) ?  ('a' + uc-'A') :  uc;
     return uc;
 }
+
+int sysinfo(void){
+  int si=sizeof(int);
+  int sf=sizeof(float);
+  int sd=sizeof(double);
+  int sc=sizeof(char);
+  int sl=sizeof(long);
+  int ss=sizeof(short);
+  printf("*size:\n     int:%d  short:%d  long:%d char:%d float:%d  double:%d\n",
+		si,     ss,	  sl,	  sc ,   sf,       sd);
+  return 0;
+}

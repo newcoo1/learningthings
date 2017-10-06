@@ -18,3 +18,5 @@ int lnequal(long a,long b);
 int reverse_str(char s[]);
 int cofs(char *s,char c);
 int lower(char uc);
+
+int sysinfo(void);
